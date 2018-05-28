@@ -5,6 +5,7 @@ import { Button } from 'semantic-ui-react';
 
 import WalletPanelFormNode from './Form/Node';
 import WalletPanelButtonLock from './Button/Lock';
+import WalletPanelButtonProxy from './Button/Proxy';
 import WalletPanelButtonRemove from './Button/Remove';
 
 export default class WalletPanelLocked extends Component<Props> {
@@ -35,6 +36,11 @@ export default class WalletPanelLocked extends Component<Props> {
                   <Button.Group vertical>
                     <WalletPanelButtonLock
                       lockWallet={actions.lockWallet}
+                    />
+                    <WalletPanelButtonProxy
+                      keys={keys}
+                      proxyVote={actions.proxyVote}
+                      settings={settings}
                     />
                     <WalletPanelButtonRemove
                       removeWallet={actions.removeWallet}

@@ -10,6 +10,7 @@ import Producers from '../components/Producers';
 import Wallet from '../components/Wallet';
 import WalletLockState from '../components/Wallet/LockState';
 
+import * as AccountActions from '../actions/account';
 import * as AccountsActions from '../actions/accounts';
 import * as GlobalsActions from '../actions/globals';
 import * as ProducersActions from '../actions/producers';
@@ -159,6 +160,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
+      ...AccountActions,
       ...AccountsActions,
       ...GlobalsActions,
       ...ProducersActions,
